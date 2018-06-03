@@ -4,11 +4,18 @@ header {
   background-color: rgb(231, 78, 0);
 
 }
+
+body{
+  background-image: url('https://pbs.twimg.com/media/Devn0EUUcAEGTjG.jpg');
+}
+
 a {
   text-decoration: none;
 }
 .site-title{
   color: black;
+  text-shadow: 3px 2px grey;
+  font-style: italic;
 }
 
 nav{
@@ -68,12 +75,62 @@ nav{
 .item{
   display:flex;
   flex-wrap: wrap;
-  border: 3px solid black;
-  width: 250px;
-  height: 100px
+  border: 3px solid grey;
+  background-color: white;
+  width: 300px;
+  height: 100px;
+  margin: 10px;
 }
 
 #lottery-block{
-  border: 3px solid black;
+  /*border: 3px solid black;*/
   width: 1300px;
+  margin: 20px 0px 20px 0px;
+  color: rgb(254, 197, 53)
+}
+
+#buy-lottery{
+  position:relative;
+  left:300px;
+  bottom: 100px;
+  color:rgb(23,175,220);
+  border: 3px solid grey;
+  border-radius: 12px;
+}
+
+#lottery{
+  font-style: italic;
+}
+
+.weapon-name{
+  padding-left: 20px;
+  padding-right:20px;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.price{
+  padding-left: 20px;
+  padding-right:20px;
+  border: 3px solid green;
+  margin-right: 10px;
+  color: red;
+}
+
+.buy{
+  height:30px;
+  margin: 10px;
+  position: relative;
+  left: 60px;
+  bottom: 10px;
+  border: 3px solid grey;
+  border-radius: 12px;
+  color:rgb(23,175,220);
+}
+
+.picture{
+  height:25px;
+  width: 100px;
+  margin:10px;
+
 }
