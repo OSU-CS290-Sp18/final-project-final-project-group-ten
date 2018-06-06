@@ -10,9 +10,6 @@ var file=require('fs');
 
 
 
-
-
-
 var server=http.createServer(handleRequest);
 
 server.listen(PORT,function(err){
