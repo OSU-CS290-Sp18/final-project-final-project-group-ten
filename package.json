@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/OSU-CS290-Sp18/final-project-group-ten/issues"
   },
-  "homepage": "https://github.com/OSU-CS290-Sp18/final-project-group-ten#readme"
+  "homepage": "https://github.com/OSU-CS290-Sp18/final-project-group-ten#readme",
+  "dependencies": {
+    "handlebars": "^4.0.11"
+  }
 }
