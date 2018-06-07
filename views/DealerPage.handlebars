@@ -4,10 +4,38 @@
 <html>
     <!--header template-->
 
+	  <head>
+
+    		<meta charset="utf-8">
+    		<title>Counter Strike</title>
+
+   			 <link rel="stylesheet" href="style.css" media="screen">
+
+    		<script src="index.js" charset="utf-8" defer></script>
+
+  	 </head>
+
+
   	 		 <body>
                 <!--header template-->
+				{{>header}}
 
   	 		 	<main class="market-place">
+						<article id ="lottery-block">
+							<p id="lottery">
+								Lottery
+							</p>
+							<p id="best-rewards">
+								Best Rewards
+							</p>
+							<ul id="reward-list">
+								<li class="reward">M4A1-GHOST</li>
+								<li class="reward">AK47-PINK</li>
+								<li class="reward">EAGLE</li>
+							</ul>
+							<button id="buy-lottery">Buy A Lottery</button>
+						</article>
+
                     {{#each Weapon}}
                         {{>Weapon}}
                     {{/each}}
