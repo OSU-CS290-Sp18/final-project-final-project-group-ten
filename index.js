@@ -101,3 +101,4 @@ CloseModal();
 confirm.addEventListener('click',Add);
 
 //*********************************************************
+//buy an item

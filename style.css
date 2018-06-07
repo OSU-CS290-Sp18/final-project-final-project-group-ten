@@ -39,29 +39,10 @@ nav{
    margin: 2px;
  }
 
- #repository{
-   background-color: rgb(28, 154, 96);
-   border:none;
-   font-weight:bold;
-   margin: 2px;
- }
-
-.cash{
-  position:absolute;
-  left: 350px;
-}
-
-
- .repository{
+ .cash{
    position:absolute;
-   right: 20px;
-   border-radius: 12px;
-   border: 3px solid rgb(29, 45, 99);
+   left: 350px;
  }
-
-#repository:hover{
-  color: rgb(254, 197, 53);
-}
 
  .add-cash{
    border: 3px solid rgb(29, 45, 99);
@@ -74,6 +55,45 @@ nav{
  #add-cash:hover{
    color: rgb(254, 197, 53);
  }
+
+
+ #repository{
+   background-color: rgb(28, 154, 96);
+   border:none;
+   font-weight:bold;
+   margin: 2px;
+ }
+
+ .repository{
+   position:absolute;
+   right: 20px;
+   border-radius: 12px;
+   border: 3px solid rgb(29, 45, 99);
+ }
+
+#repository:hover{
+  color: rgb(254, 197, 53);
+}
+
+#repo{
+  background-color: rgb(28, 154, 96);
+  border:none;
+  font-weight:bold;
+  margin: 2px;
+}
+
+.repo{
+  position:absolute;
+  right: 150px;
+  border-radius: 12px;
+  border: 3px solid rgb(29, 45, 99);
+}
+
+#repo:hover{
+ color: rgb(254, 197, 53);
+}
+
+
 
  .market-place{
    display:flex;
