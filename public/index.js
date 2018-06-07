@@ -65,6 +65,7 @@ function ShowRepoModule ()
 
 repo.addEventListener('click',ShowRepoModule);
 
+//show the addcash modal when click the button
 //********************************************************
 
 var AddCash = document.getElementById('add-cash');
@@ -80,6 +81,23 @@ function ShowAddCashModule ()
 }
 
 AddCash.addEventListener('click',ShowAddCashModule);
+
+//show the sell button modal when click the button
+//********************************************************
+
+var Sell = document.getElementById('create-item-button');
+
+function ShowCreateItem ()
+{
+  var show1 = document.getElementsByClassName('hidden1');
+  for(var i=0;i<show1.length;i+=1)
+  {
+    show1[i].style.display = 'block';
+  }
+}
+
+Sell.addEventListener('click',ShowCreateItem);
+
 
 //********************************************************
 //change cash amount

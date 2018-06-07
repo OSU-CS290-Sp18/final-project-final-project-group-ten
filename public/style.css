@@ -106,7 +106,7 @@ nav{
   border: 3px solid grey;
   background-color: white;
   width: 300px;
-  height: 100px;
+  height: 115px;
   margin: 10px;
 }
 
@@ -157,7 +157,7 @@ nav{
   margin: 10px;
   position: relative;
   left: 60px;
-  bottom: 10px;
+  bottom: 18px;
   border: 3px solid grey;
   border-radius: 12px;
   color:rgb(23,175,220);
@@ -168,8 +168,8 @@ nav{
 }
 
 .picture{
-  height:25px;
-  width: 100px;
+  height:33px;
+  width: 110px;
   margin:10px;
 }
 
@@ -223,6 +223,7 @@ nav{
   margin: 40px auto;
   background-color: #fff;
   border-radius: 15px;
+  background-image: url('https://pbs.twimg.com/media/DfHUDCYU8AAFtCE.jpg:large');
 }
 
 .modal-header{
