@@ -84,10 +84,10 @@ AddCash.addEventListener('click',ShowAddCashModule);
 //********************************************************
 //change cash amount
 var confirm = document.getElementById('confirm');
-
+var b = 2000;
 function Add (){
 var amount = document.getElementById('amount');
-var b = parseInt(amount.value) + 2000;
+b = b + parseInt(amount.value);
 var a = document.createTextNode('Cash: $'+ b);
 var t = document.createElement("li");
 t.appendChild(a);
@@ -101,3 +101,4 @@ CloseModal();
 confirm.addEventListener('click',Add);
 
 //*********************************************************
+//buy an item
