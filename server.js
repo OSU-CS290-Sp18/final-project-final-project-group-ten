@@ -15,7 +15,18 @@ app.engine('handlebars',exphbs({defaultLayout:'main'}));
 app.set('view engine','handlebars');
 
 app.use(express.static('public'));
-app.get('/',function(req,res,next){
-  res.status(200).render('DealerPage',);
 
+app.get('/',function(req,res,next){
+  res.status(200).render('DealerPage',{Weapon:page});
+
+});
+
+app.get('*', function(req,res){
+  res.status(404).render('404Page');
+
+});
+
+app.listen(port,function(){
+
+  console.log("==Server is listening to port: ",port);
 });
