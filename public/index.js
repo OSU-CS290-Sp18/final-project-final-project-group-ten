@@ -131,3 +131,121 @@ function Buy ()
 for(var i=0;i<buy.length;i+=1){
 buy[i].addEventListener('click',Buy);
 }
+
+//**********************************************************
+//sell an item
+
+
+
+var WeaponURL = 'none';
+
+var WeaponName = 'Unknown';
+
+function MatchWeapon ()
+{
+  var WeaponCode = document.getElementById('enter-weapon-code').value;
+  var price = document.getElementById('sell-price').value;
+
+  if(WeaponCode == '1')
+  {
+    WeaponName = 'M4A1-GHOST';
+    WeaponURL = 'https://pbs.twimg.com/media/DevWivzU0AAMFMN.jpg';
+  }
+  else if(WeaponCode == '2')
+  {
+    WeaponName = 'MP5-GREEN';
+    WeaponURL = 'https://pbs.twimg.com/media/DevXd3FUwAECRbC.jpg';
+  }
+  else if(WeaponCode == '3')
+  {
+    WeaponName = 'USP-GREEN';
+    WeaponURL = 'https://pbs.twimg.com/media/DevXtJ8V4AAIeUw.jpg';
+  }
+  else if(WeaponCode == '4')
+  {
+    WeaponName = 'ROCK';
+    WeaponURL = 'https://pbs.twimg.com/media/DevX1scVMAEPUyO.jpg';
+  }
+  else if(WeaponCode == '5')
+  {
+    WeaponName = 'M4A1-BLUE';
+    WeaponURL = 'https://pbs.twimg.com/media/DevX-FLUwAEHvna.jpg';
+  }
+  else if(WeaponCode == '6')
+  {
+    WeaponName = 'SNIPER';
+    WeaponURL = 'https://pbs.twimg.com/media/DevYG7UUYAAGkON.jpg';
+  }
+  else if(WeaponCode == '7')
+  {
+    WeaponName = 'AK47-PINK';
+    WeaponURL = 'https://pbs.twimg.com/media/DevYzEjUEAEcSns.jpg';
+  }
+  else if(WeaponCode == '8')
+  {
+    WeaponName = 'PANTHER';
+    WeaponURL = 'https://pbs.twimg.com/media/DevZBH-UwAAlWG6.jpg';
+  }
+  else if(WeaponCode == '9')
+  {
+    WeaponName = 'REAPER';
+    WeaponURL = 'https://pbs.twimg.com/media/DevZKqOUYAAEFtE.jpg';
+  }
+  else if(WeaponCode == '10')
+  {
+    WeaponName = 'RW';
+    WeaponURL = 'https://pbs.twimg.com/media/DevZS3qUYAA4ZpY.jpg';
+  }
+  else if(WeaponCode == '11')
+  {
+    WeaponName = 'WIND';
+    WeaponURL = 'https://pbs.twimg.com/media/DevZdCxU0AANx61.jpg';
+  }
+  else if(WeaponCode == '12')
+  {
+    WeaponName = 'EAGLE';
+    WeaponURL = 'https://pbs.twimg.com/media/DevZmciVAAAE-b7.jpg';
+  }
+  else if(WeaponCode == '13')
+  {
+    WeaponName = 'TIGER';
+    WeaponURL = 'https://pbs.twimg.com/media/DevZuzjUYAE4xmM.jpg';
+  }
+  else if(WeaponCode == '14')
+  {
+    WeaponName = 'HAMSTER';
+    WeaponURL = 'https://pbs.twimg.com/media/DevZ4JTU0AAgr1k.jpg';
+  }
+  else{
+    alert("You entered a wrong weapon code!");
+  }
+}
+
+function insertNewPost(WeaponName, price, WeaponURL)
+{
+  var itemTemplate = Handlebars.templates.Weapon;
+
+  var itemHTML = itemTemplate({
+    name: WeaponName,
+    price: price,
+    photoURL: WeaponURL
+  });
+
+  var market = document.getElementsByClassName('market-place');
+
+  market[0].insertAdjacentHTML('beforeend', insertNewPost );
+}
+
+//***************************************************************
+//press create post button
+
+var createPostButton = document.getElementById('create-post');
+
+function createPost()
+{
+  MatchWeapon();
+  insertNewPost();
+  CloseModal();
+}
+
+createPostButton.addEventListener('click', createPost);
