@@ -10,6 +10,16 @@ var app=express();
 var port=process.env.PORT || 3000;
 var page=require('./weaponData');
 var exphbs=require('express-handlebars');
+
+/*Connec tot the mongo data base */
+var mongoHost=process.env.MONGO_HOST;
+var mongoPort=process.env.MONGO_PORT || 27017;
+var mongouser=process.env.MONGO_USER;
+var mongoPassword=process.env.MONGO_PASSWORD;
+var mongoDBName=process.env.MONGO_DB_NAME;
+
+var mongoURL='mongodb://'+mongoUser + ':' + mongoPassword + '@' + mogoHost + ':' + mongoPort + '/' + mongoDBName;
+
 /*var bag: used to pull out player's data in mongo DB*/
 
 
@@ -28,7 +38,7 @@ app.get('/',function(req,res,next){
 */
 app.get('/playerBag', function (req,res,next){
 
-  res.status(200).render('playerBag',{})
+  res.status(200).render('playerBag',{WeaponSell:})
 });
 
 app.get('*', function(req,res){
