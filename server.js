@@ -21,7 +21,7 @@ app.get('/',function(req,res,next){
 
 });
 
-app.use(express.static('public'));
+
 app.get('*', function(req,res){
   res.status(404).render('404Page');
 
