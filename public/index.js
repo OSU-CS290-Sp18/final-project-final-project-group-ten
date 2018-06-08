@@ -120,3 +120,14 @@ confirm.addEventListener('click',Add);
 
 //*********************************************************
 //buy an item
+
+var buy = document.getElementsByClassName('buy');
+
+function Buy ()
+{
+
+}
+
+for(var i=0;i<buy.length;i+=1){
+buy[i].addEventListener('click',Buy);
+}
