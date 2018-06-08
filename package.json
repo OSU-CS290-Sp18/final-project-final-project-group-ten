@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo\"Error: no test specified\" && exist 1",
     "start": "node server.js",
-    "build": "handlebars view/partial/Weapon.handlebars -f public/Weaponhandlebar.js"
+    "build": "handlebars views/partials/Weapon.handlebars -f public/Weaponhandlebar.js",
+    "construct": "handlebars views/partials/WeaponSell.handlebars -f public/WeaponSellhandlebar.js"
   },
   "repository": {
     "type": "git",

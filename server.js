@@ -10,6 +10,8 @@ var app=express();
 var port=process.env.PORT || 3000;
 var page=require('./weaponData');
 var exphbs=require('express-handlebars');
+/*var bag: used to pull out player's data in mongo DB*/
+
 
 app.engine('handlebars',exphbs());
 app.set('view engine','handlebars');
@@ -19,6 +21,14 @@ app.use(express.static('public'));
 app.get('/',function(req,res,next){
   res.status(200).render('DealerPage',{Weapon:page});
 
+});
+
+/*Function used to teturn and compose the 
+  Player's bag page.
+*/
+app.get('/playerBag', function (req,res,next){
+
+  res.status(200).render('playerBag',{})
 });
 
 app.get('*', function(req,res){
