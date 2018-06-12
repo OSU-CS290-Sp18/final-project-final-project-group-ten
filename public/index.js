@@ -139,14 +139,13 @@ getRepo.addEventListener('click', CheckRepo);
 
 var buy = document.getElementsByClassName('buy');
 
-console.log(buy[0].parentNode.id);
-
 var request = new XMLHttpRequest();
 
 var WeaponName = 'unknown';
 
 function Buy1 ()
 {
+    request.open('POST','');
     WeaponName = 'M4A1-GHOST';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -159,6 +158,7 @@ function Buy1 ()
 
 function Buy2 ()
 {
+    request.open('POST','');
     WeaponName = 'MP5-GREEN';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -171,6 +171,7 @@ function Buy2 ()
 
 function Buy3 ()
 {
+  request.open('POST','');
     WeaponName = 'USP-GREEN';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -183,6 +184,7 @@ function Buy3 ()
 
 function Buy4 ()
 {
+  request.open('POST','');
     WeaponName = 'ROCK';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -195,6 +197,7 @@ function Buy4 ()
 
 function Buy5()
 {
+  request.open('POST','');
     WeaponName = 'M4A1-BLUE';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -207,6 +210,7 @@ function Buy5()
 
 function Buy6()
 {
+  request.open('POST','');
     WeaponName = 'SNIPER';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -219,6 +223,7 @@ function Buy6()
 
 function Buy7 ()
 {
+  request.open('POST','');
     WeaponName = 'AK47-PINK';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -231,6 +236,7 @@ function Buy7 ()
 
 function Buy8 ()
 {
+  request.open('POST','');
     WeaponName = 'PANTHER';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -243,6 +249,7 @@ function Buy8 ()
 
 function Buy9 ()
 {
+  request.open('POST','');
     WeaponName = 'REAPER';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -255,6 +262,7 @@ function Buy9 ()
 
 function Buy10 ()
 {
+  request.open('POST','');
     WeaponName = 'RW';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -267,6 +275,7 @@ function Buy10 ()
 
 function Buy11 ()
 {
+  request.open('POST','');
     WeaponName = 'WIND';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -279,6 +288,7 @@ function Buy11 ()
 
 function Buy12 ()
 {
+  request.open('POST','');
     WeaponName = 'EAGLE';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -291,6 +301,7 @@ function Buy12 ()
 
 function Buy13 ()
 {
+  request.open('POST','');
     WeaponName = 'TIGER';
     var requestBody = JSON.stringify({
           name: WeaponName,
@@ -303,6 +314,7 @@ function Buy13 ()
 
 function Buy14 ()
 {
+  request.open('POST','');
     WeaponName = 'HAMSTER';
     var requestBody = JSON.stringify({
           name: WeaponName,
