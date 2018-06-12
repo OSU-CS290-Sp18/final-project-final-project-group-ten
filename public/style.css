@@ -346,3 +346,32 @@ nav{
 }
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/
+
+/*For WeaponSell.handlebars*/
+.count{
+  position: relative;
+  bottom: 60px;
+  left: 135px;
+}
+
+.sell{
+  position: relative;
+  left:230px;
+  bottom: 97px;
+}
+
+.sell-place{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+
+.sell{
+  border: 3px solid grey;
+  border-radius: 12px;
+  color:rgb(23,175,220);
+}
+
+.sell:hover{
+  background-color: rgb(254, 197, 53);
+}
