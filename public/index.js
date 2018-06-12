@@ -119,6 +119,15 @@ CloseModal();
 confirm.addEventListener('click',Add);
 
 //*********************************************************
+//open check repo
+var request1 = new XMLHttpRequest();
+
+request.open('POST', 'playerBag');
+
+
+
+
+//*********************************************************
 //buy an item
 
 var buy = document.getElementsByClassName('buy');
