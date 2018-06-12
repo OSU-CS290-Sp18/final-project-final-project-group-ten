@@ -5,37 +5,295 @@
     		<meta charset="utf-8">
     		<title>Counter Strike</title>
 
-   			 <link rel="stylesheet" href="style.css" media="screen">
+   			 <link rel="stylesheet" href="public/style.css" media="screen">
 
-    		<script src="index.js" charset="utf-8" defer></script>
+    		<script src="public/index.js" charset="utf-8" defer></script>
 
   	 </head>
 
   	 		 <body>
   	 		 	<header>
   	 		 		 <a href="#"><h1 class="site-title"> Counter Strike </h1></a>
+						 <nav class = "user-information">
+							 <ul class = "navlist" id = "navlist">
+								 <li class = "navitem player-name">Player name: Typical-Gamer</li>
+								 <li class = "navitem cash">Cash: $2000</li>
+								 <li class = "navitem add-cash"><button id = "add-cash">Add Cash</button></li> <!--click to add cash-->
+								 <li class = "navitem repo"><button id = "repo">Check Repo</button></li>
+								 <li class = "navitem repository"><button id = "repository">Repository</button></li> <!--click to unhide...-->
+							 </ul>
+						 </nav>
   	 		 	</header>
-  	 		 	<main class="market place">	
-  	 		 		<article class="Item">
-						Weapon 1
 
+  	 		 	<main class="market-place">
+
+						<article id ="lottery-block">
+							<p id="lottery">
+								Lottery
+							</p>
+							<p id="best-rewards">
+								Best Rewards
+							</p>
+							<ul id="reward-list">
+								<li class="reward">M4A1-GHOST</li>
+								<li class="reward">AK47-PINK</li>
+								<li class="reward">EAGLE</li>
+							</ul>
+							<button id="buy-lottery">Buy A Lottery</button>
+						</article>
+
+  	 		 		<article class="item" id="M4A1-GHOST" id="precious">
+						<p class="weapon-name">
+							M4A1-GHOST
+						</p>
+						<p class="price">
+							Price: $2500
+						</p>
+						<img src="https://pbs.twimg.com/media/DevWivzU0AAMFMN.jpg" class="picture"> <!--The picture of the item-->
+						<button class="buy">Buy</button>
   	 		 		</article>
 
-  	 		 		<article class="Item">
-						Weapon 2	
-
+  	 		 		<article class="item" id="MP5-GREEN">
+							<p class="weapon-name">
+								MP5-GREEN
+							</p>
+							<p class="price">
+								Price: $500
+							</p>
+							<img src="https://pbs.twimg.com/media/DevXd3FUwAECRbC.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
   	 		 		</article>
 
-  	 		 		<article class="Item">
-						Weapon 3
-
+  	 		 		<article class="item" id="USP-GREEN">
+							<p class="weapon-name">
+								UPS-GREEN
+							</p>
+							<p class="price">
+								Price: $300
+							</p>
+							<img src="https://pbs.twimg.com/media/DevXtJ8V4AAIeUw.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
   	 		 		</article>
 
-  	 		 		<article class="Item">
-						Weapon 4
-
+  	 		 		<article class="item" id="ROCK">
+							<p class="weapon-name">
+								ROCK
+							</p>
+							<p class="price">
+								Price: $600
+							</p>
+							<img src="https://pbs.twimg.com/media/DevX1scVMAEPUyO.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
   	 		 		</article>
+
+						<article class="item" id="M4A1-BLUE">
+							<p class="weapon-name">
+								M4A1-BLUE
+							</p>
+							<p class="price">
+								Price: $1200
+							</p>
+							<img src="https://pbs.twimg.com/media/DevX-FLUwAEHvna.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="SNIPER">
+							<p class="weapon-name">
+								SNIPER
+							</p>
+							<p class="price">
+								Price: $800
+							</p>
+							<img src="https://pbs.twimg.com/media/DevYG7UUYAAGkON.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="AK47-PINK" id="precious">
+							<p class="weapon-name">
+								AK47-PINK
+							</p>
+							<p class="price">
+								Price: $2500
+							</p>
+							<img src="https://pbs.twimg.com/media/DevYzEjUEAEcSns.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="PANTHER">
+							<p class="weapon-name">
+								PANTHER
+							</p>
+							<p class="price">
+								Price: $700
+							</p>
+							<img src="https://pbs.twimg.com/media/DevZBH-UwAAlWG6.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="REAPER">
+							<p class="weapon-name">
+								REAPER
+							</p>
+							<p class="price">
+								Price: $800
+							</p>
+							<img src="https://pbs.twimg.com/media/DevZKqOUYAAEFtE.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="RW">
+							<p class="weapon-name">
+								RW
+							</p>
+							<p class="price">
+								Price: $1000
+							</p>
+							<img src="https://pbs.twimg.com/media/DevZS3qUYAA4ZpY.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="WIND">
+							<p class="weapon-name">
+								WIND
+							</p>
+							<p class="price">
+								Price: $600
+							</p>
+							<img src="https://pbs.twimg.com/media/DevZdCxU0AANx61.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="EAGLE" id="precious">
+							<p class="weapon-name">
+								EAGLE
+							</p>
+							<p class="price">
+								Price: $2000
+							</p>
+							<img src="https://pbs.twimg.com/media/DevZmciVAAAE-b7.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="TIGER">
+							<p class="weapon-name">
+								TIGER
+							</p>
+							<p class="price">
+								Price: $700
+							</p>
+							<img src="https://pbs.twimg.com/media/DevZuzjUYAE4xmM.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+						<article class="item" id="HAMSTER">
+							<p class="weapon-name">
+								HAMSTER
+							</p>
+							<p class="price">
+								Price: $500
+							</p>
+							<img src="https://pbs.twimg.com/media/DevZ4JTU0AAgr1k.jpg" class="picture"> <!--The picture of the item-->
+							<button class="buy">Buy</button>
+						</article>
+
+
   	 		 	 </main>
+
+					<button id="create-item-button">Sell Weapon</button>
+
+					<div id="modal-backdrop" class="hidden1"></div>
+					<div id="create-item-modal" class = "hidden1">
+						<div class = "modal">
+
+							<div class = "modal-header">
+								<h3>Create A Post</h3>
+								<button class="close-modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<div class = "post-input">
+									<label for="enter-weapon-code">Enter Weapon Code</label>
+									<textarea id="enter-weapon-code"></textarea>
+								</div>
+
+								<div class = "post-input">
+									<label for="enter-weapon-price">Enter the price</label>
+									<input class= "enter-weapon-price" id ="sell-price">
+								</div>
+							</div>
+
+								<div class="modal-footer">
+									<button class="modal-cancel-button">Cancel</button>
+									<button class="modal-accept-button" id = "create-post">Create Post</button>
+								</div>
+
+
+						</div>
+					</div>
+<!---------------------------------------------------------------------------->
+
+					<div id="modal-backdrop" class="hidden2"></div>
+					<div id="create-item-modal" class = "hidden2">
+						<div class = "modal">
+
+							<div class = "modal-header">
+								<h3>Add Cash</h3>
+								<button class="close-modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+
+								<div class = "post-input">
+									<label for="enter-weapon-price">The amount</label>
+									<input class="enter-weapon-price" id = "amount">
+								</div>
+							</div>
+
+								<div class="modal-footer">
+									<button class="modal-cancel-button">Cancel</button>
+									<button class="modal-accept-button" id = "confirm">Confirm</button>
+								</div>
+						</div>
+					</div>
+
+<!---------------------------------------------------------------------------->
+
+					<div id="modal-backdrop" class="hidden3"></div>
+					<div id="create-item-modal" class = "hidden3">
+						<div class = "modal">
+
+							<div class = "modal-header">
+								<h3>Your Repository</h3>
+								<button class="close-modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+
+								<ol>
+									<li>M4A1-GHOST: 5</li>
+									<li>MP5-GREEN: 5</li>
+									<li>USP-GREEN: 5</li>
+									<li>ROCK: 5</li>
+									<li>M4A1-BLUE: 5</li>
+									<li>SNIPER: 5</li>
+									<li>AK47-PINK: 5</li>
+									<li>PANTHER: 5</li>
+									<li>REAPER: 5</li>
+									<li>RW: 5</li>
+									<li>WIND: 5</li>
+									<li>EAGLE: 5</li>
+									<li>TIGER: 5</li>
+									<li>HAMSTER: 5</li>
+								</ol>
+							</div>
+
+								<div class="modal-footer">
+									<button class="modal-cancel-button">Cancel</button>
+								</div>
+						</div>
+					</div>
+
+<!---------------------------------------------------------------------------->
 
   	  	  </body>
 
