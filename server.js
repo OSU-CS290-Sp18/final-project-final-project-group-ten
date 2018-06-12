@@ -45,7 +45,7 @@ app.get('/',function(req,res,next){
 */
 app.get('/playerBag', function (req,res,next){
 
-  res.status(200).render('playerBag',{WeaponSell:bag})
+  res.status(200).render('playerBag',{WeaponSell:page})
 });
 
 app.get('*', function(req,res){
