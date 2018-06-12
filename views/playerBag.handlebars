@@ -2,14 +2,22 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <mate charset="utf-8"></mate>
-        <title>Player's Package<title>
-            <link rel="stylesheet" href="style.css" madia="screen">
-        <script src="index.js" charset="utf-8" defer></script>
-    </head>
+	  <head>
+
+    		<meta charset="utf-8">
+    		<title>Counter Strike</title>
+
+   			 <link rel="stylesheet" href="style.css" media="screen">
+
+				 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.js"></script>
+				 <script src="/Weaponhandlebar.js" defer></script>
+
+    		<script src="index.js" charset="utf-8" defer></script>
+
+  	 </head>
 
     <body>
+        {{>header}}
         <main class="sell's-place">
             {{#each WeaponSell}}
                 {{>WeaponSell}}
