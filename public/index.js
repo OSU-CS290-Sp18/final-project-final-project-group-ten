@@ -125,11 +125,7 @@ var getRepo = document.getElementById('repo');
 
 function CheckRepo ()
 {
-
-  var request1 = new XMLHttpRequest();
-  var url = '/playerBag';
-  console.log(url);
-  request1.open('POST', url);
+  window.location = '/playerBag';
 }
 
 getRepo.addEventListener('click', CheckRepo);
