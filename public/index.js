@@ -120,12 +120,19 @@ confirm.addEventListener('click',Add);
 
 //*********************************************************
 //open check repo
-var request1 = new XMLHttpRequest();
 
-request.open('POST', 'playerBag');
+var getRepo = document.getElementById('repo');
 
+function CheckRepo ()
+{
 
+  var request1 = new XMLHttpRequest();
+  var url = '/playerBag';
+  console.log(url);
+  request1.open('POST', url);
+}
 
+getRepo.addEventListener('click', CheckRepo);
 
 //*********************************************************
 //buy an item
