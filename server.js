@@ -22,6 +22,19 @@ var mongoURL='mongodb://'+mongoUser + ':' + mongoPassword + '@' + mogoHost + ':'
 
 /*var bag: used to pull out player's data in mongo DB*/
 
+var MongoClient = require('mongodb').MongoClient;
+
+var mongoHost = process.env.MONGO_HOST;
+var mongoPort = process.env.MONGO_PORT || '27017';
+var mongoUsername = process.env.MONGO_USERNAME;
+var mongoPassword = process.env.MONGO_PASSWORD;
+var mongoDBName = process.env.MONGO_DB_NAME;
+
+var mongoURL = "mongodb://" +
+  mongoUsername + ":" + mongoPassword + "@" + mongoHost + ":" + mongoPort +
+  "/" + mongoDBName;
+
+var mongoDB = null;
 
 app.engine('handlebars',exphbs());
 app.set('view engine','handlebars');
@@ -33,7 +46,7 @@ app.get('/',function(req,res,next){
 
 });
 
-/*Function used to teturn and compose the 
+/*Function used to teturn and compose the
   Player's bag page.
 */
 app.get('/playerBag', function (req,res,next){
