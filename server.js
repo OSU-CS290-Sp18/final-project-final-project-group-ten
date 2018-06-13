@@ -36,6 +36,7 @@ app.set('view engine','handlebars');
 app.use(express.static('public'));
 
 app.get('/',function(req,res,next){
+  console.log("----",req.url);
   res.status(200).render('DealerPage',{Weapon:page});
 
 });
@@ -147,6 +148,7 @@ function Findweapon (Collection, name){
   Player's bag page.
 */
 app.get('/playerBag', function (req,res,next){
+  console.log("=====",req.url);
   var player=mongoDB.collection('player');
   var weaponcursor=player.find({});
   weaponcursor.toArray( function (err,weaponDocs){
