@@ -82,21 +82,21 @@ function ShowAddCashModule ()
 
 AddCash.addEventListener('click',ShowAddCashModule);
 
-//show the sell button modal when click the button
-//********************************************************
-
-var Sell = document.getElementById('create-item-button');
-
-function ShowCreateItem ()
-{
-  var show1 = document.getElementsByClassName('hidden1');
-  for(var i=0;i<show1.length;i+=1)
-  {
-    show1[i].style.display = 'block';
-  }
-}
-
-Sell.addEventListener('click',ShowCreateItem);
+// //show the sell button modal when click the button
+// //********************************************************
+//
+// var Sell = document.getElementById('create-item-button');
+//
+// function ShowCreateItem ()
+// {
+//   var show1 = document.getElementsByClassName('hidden1');
+//   for(var i=0;i<show1.length;i+=1)
+//   {
+//     show1[i].style.display = 'block';
+//   }
+// }
+//
+// Sell.addEventListener('click',ShowCreateItem);
 
 
 //********************************************************
@@ -524,6 +524,15 @@ buy[13].addEventListener('click',Buy14);
 
 //**********************************************************
 //sell an item
+// var sell = document.getElementsByClassName('sell');
+//
+// function SellWeapon () //send request and delete item
+// {
+//   console.log("======listening!");
+//   console.log(sell.length);
+// }
+//
+// sell[0].addEventListener('click', SellWeapon);
 
 
 
