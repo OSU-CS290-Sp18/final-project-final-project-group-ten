@@ -14,7 +14,7 @@ var exphbs=require('express-handlebars');
 /*request a mango db data set */
 var bag="user data";
 
-/*
+
 var MongoClient = require('mongodb').MongoClient;
 var mongoHost = process.env.MONGO_HOST;
 var mongoPort = process.env.MONGO_PORT || '27017';
@@ -27,7 +27,7 @@ var mongoURL = "mongodb://" +
   "/" + mongoDBName;
 
 var mongoDB = null;
-*/
+
 
 
 app.engine('handlebars',exphbs());
@@ -72,14 +72,29 @@ app.post('/', function (req,res,next){
     );
   }
   else {
+    var New_weapon=weponInfor(name);
+    Collection.insertOne({
+      item: New_weapon.name,
+      photoURL: New_weapon.photoURL,
+      price: New_weapon.price,
+      count: 1
 
+    });
   }
 
 
   
 });
 
+function weaponInfor(name){
+  for(var i=0;i<page.length;i++){
+    if(page[i].name===name)
+      return page[i];
+  }
 
+  console.log('No weapon matched s your choices');
+
+}
 
 function Findweapon (Collection, name){
   for(var i=0;i<Collection.length;i+=1)
