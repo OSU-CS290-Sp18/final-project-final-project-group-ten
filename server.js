@@ -27,7 +27,7 @@ var mongoURL = "mongodb://" +
 
 var mongoDB = null;
 /*request a mango db data set */
-var Playerbag=mongoDB.collection('player');
+/*var Playerbag=mongoDB.collection('player');*/
 
 
 app.engine('handlebars',exphbs());
