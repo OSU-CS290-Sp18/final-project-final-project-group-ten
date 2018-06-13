@@ -147,8 +147,19 @@ function Findweapon (Collection, name){
   Player's bag page.
 */
 app.get('/playerBag', function (req,res,next){
+  var player=mongoDB.collection('player');
+  var weaponcursor=player.find({});
+  weaponcursor.toArray( function (err,weaponDocs){
+    if(err){
+      res.status(500).send("Failed for fetching weapon's data");
+    }
+    else{
+      res.status(200).render('playerBag',{WeaponSell:weaponDocs})
 
-  res.status(200).render('playerBag',{WeaponSell:page})
+    }
+
+  });
+
 });
 
 app.get('*', function(req,res){
