@@ -11,8 +11,7 @@ var port=process.env.PORT || 3000;
 var page=require('./weaponData');
 var exphbs=require('express-handlebars');
 
-/*request a mango db data set */
-var bag="user data";
+
 
 
 var MongoClient = require('mongodb').MongoClient;
@@ -27,7 +26,8 @@ var mongoURL = "mongodb://" +
   "/" + mongoDBName;
 
 var mongoDB = null;
-
+/*request a mango db data set */
+var Playerbag=mongoDB.collection('player');
 
 
 app.engine('handlebars',exphbs());
@@ -41,14 +41,17 @@ app.get('/',function(req,res,next){
 });
 
 app.use(bodyParser.json());
-
+/*
+  monitor which used to pick up request sended from
+  DealerPage and will sent weapon to data base.
+*/
 app.post('/', function (req,res,next){
   console.log("====",req.body.name);
 
   var name = req.body.name;
-  var Collection = mongoDB.collection('player');
-  var a = Findweapon(Collection, name);
-  if(a === true)
+  var Collection = mongoDB.collection('player');  
+  var a = Findweapon(Collection, name);             /*Figure out whether or not there has a weapon already exists in package */
+  if(a === true)                                    /*If there is a weapon in our package, then count number + 1.*/
   {
     Collection.updateOne(
       {item: name },
@@ -71,8 +74,8 @@ app.post('/', function (req,res,next){
       }
     );
   }
-  else {
-    var New_weapon=weponInfor(name);
+  else {                                           /*Else the weapon doesn't exist in databases.*/
+    var New_weapon=weponInfor(name);               /*Pull out information from json file which used to initialize the Delerpage*/
     Collection.insertOne({
       item: New_weapon.name,
       photoURL: New_weapon.photoURL,
@@ -82,10 +85,36 @@ app.post('/', function (req,res,next){
     });
   }
 
+});
+/*
+  Remove weapon when player going to sell it on playerBag page.
+  Whe count>1 just get deduction on count,else if count===1 remove the 
+  whole weapon from data base.
+*/
+app.post('/PlayerBag', function (req,res,next){
+  var name=req.body.name;
+  var Collection=mongoDB.collection('player');
 
-  
+  for(var i=0;i<Collection.length;i+=1){
+    if(Collection[i].item===name){
+      if(Collection[i].count===1){
+        Collection.deleteOne({item:name});
+
+      }
+      else{
+        Collection[i].count-=1;
+      }
+    }
+
+  }
+
+
 });
 
+
+/*
+  Function used to pull out information from jason file.
+*/
 function weaponInfor(name){
   for(var i=0;i<page.length;i++){
     if(page[i].name===name)
@@ -95,6 +124,9 @@ function weaponInfor(name){
   console.log('No weapon matched s your choices');
 
 }
+/*
+  Function used to determine whether or not here has a matched weapon in our databases.
+*/
 
 function Findweapon (Collection, name){
   for(var i=0;i<Collection.length;i+=1)
