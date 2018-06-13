@@ -45,9 +45,56 @@ app.use(bodyParser.json());
 app.post('/', function (req,res,next){
   console.log("====",req.body.name);
 
+  var name = req.body.name;
+  var Collection = mongoDB.collection('player');
+  var a = Findweapon(Collection, name);
+  if(a === true)
+  {
+    Collection.updateOne(
+      {item: name },
+      {$inc: {count}},
+      function (err, result)
+      {
+        if(err)
+        {
+          res.status(500).send("Fail to update count!");
+        }
+        else
+        {
+          console.log("=== mongo insert result:", result);
+          if(result.matchedCount > 0){
+            res.status(200).end();
+          }else{
+            next();
+          }
+        }
+      }
+    );
+  }
+  else {
+
+  }
+
 
   
 });
+
+
+
+function Findweapon (Collection, name){
+  for(var i=0;i<Collection.length;i+=1)
+  {
+    if(Collection[i].item === name)
+    {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+}
+
+
 
 /*Function used to teturn and compose the
   Player's bag page.
