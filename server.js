@@ -27,7 +27,7 @@ var mongoURL = "mongodb://" +
 
 var mongoDB = null;
 /*request a mango db data set */
-var Playerbag=mongoDB.collection('player');
+/*var Playerbag=mongoDB.collection('player');*/
 
 
 app.engine('handlebars',exphbs());
@@ -75,7 +75,7 @@ app.post('/', function (req,res,next){
     );
   }
   else {                                           /*Else the weapon doesn't exist in databases.*/
-    var New_weapon=weponInfor(name);               /*Pull out information from json file which used to initialize the Delerpage*/
+    var New_weapon=weaponInfor(name);               /*Pull out information from json file which used to initialize the Delerpage*/
     Collection.insertOne({
       item: New_weapon.name,
       photoURL: New_weapon.photoURL,
@@ -156,11 +156,7 @@ app.get('*', function(req,res){
 
 });
 
-app.listen(port,function(){
-
-  console.log("==Server is listening  to port: ",port);
-});
-
+console.log(mongoURL);
 
 MongoClient.connect(mongoURL, function (err,client){
   if (err){
