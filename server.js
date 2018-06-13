@@ -73,11 +73,12 @@ app.post('/', function (req,res,next){
     );
   }
   else {
-    
+
   }
 
 
 });
+
 
 function Findweapon (Collection, name){
   for(var i=0;i<Collection.length;i+=1)
