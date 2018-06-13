@@ -128,3 +128,15 @@ app.listen(port,function(){
 
   console.log("==Server is listening  to port: ",port);
 });
+
+
+MongoClient.connect(mongoURL, function (err,client){
+  if (err){
+    throw err;
+  }
+  mongoDB=client.db(mongoDBName);
+  app.listen(port, function(){
+    console.log("==server connected to mongoDB.")
+  });
+
+});
