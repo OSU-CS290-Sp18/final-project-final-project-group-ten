@@ -13,9 +13,9 @@ var exphbs=require('express-handlebars');
 
 /*request a mango db data set */
 var bag="user data";
-/*
-var MongoClient = require('mongodb').MongoClient;
 
+var MongoClient = require('mongodb').MongoClient;
+/*
 var mongoHost = process.env.MONGO_HOST;
 var mongoPort = process.env.MONGO_PORT || '27017';
 var mongoUsername = process.env.MONGO_USERNAME;
@@ -38,6 +38,11 @@ app.use(express.static('public'));
 app.get('/',function(req,res,next){
   res.status(200).render('DealerPage',{Weapon:page});
 
+});
+
+app.post('/', function (req,res,next){
+
+  console.log("====",req);
 });
 
 /*Function used to teturn and compose the
