@@ -144,7 +144,7 @@ function Buy1 ()
     request.open('POST','');
     WeaponName = 'M4A1-GHOST';
     var requestBody = JSON.stringify({
-          name: WeaponName,
+          name: WeaponName
         });
 
     request.setRequestHeader('Content-Type', 'application/json');
