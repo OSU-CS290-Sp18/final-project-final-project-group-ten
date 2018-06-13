@@ -141,6 +141,11 @@ var WeaponName = 'unknown';
 
 function Buy1 ()
 {
+    if(b < 2500)
+    {
+      alert("You do NOT have enough cash, please recharge first!");
+    }
+    else {
     request.open('POST','');
     WeaponName = 'M4A1-GHOST';
     var requestBody = JSON.stringify({
@@ -149,11 +154,24 @@ function Buy1 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b = b - 2500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an M4A1-GHOST!!");
+  }
 }
 
 function Buy2 ()
 {
+  if(b < 500){
+    alert("You do NOT have enough cash, please recharge first!");
+    }
+  else {
     request.open('POST','');
     WeaponName = 'MP5-GREEN';
     var requestBody = JSON.stringify({
@@ -162,11 +180,24 @@ function Buy2 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b = b - 500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an MP5-GREEN!!");
+  }
 }
 
 function Buy3 ()
 {
+  if(b < 300){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'USP-GREEN';
     var requestBody = JSON.stringify({
@@ -175,11 +206,24 @@ function Buy3 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-300;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an USP-GREEN!!");
+  }
 }
 
 function Buy4 ()
 {
+  if(b < 600){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else {
   request.open('POST','');
     WeaponName = 'ROCK';
     var requestBody = JSON.stringify({
@@ -188,11 +232,24 @@ function Buy4 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b =b-600;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an ROCK!!");
+  }
 }
 
 function Buy5()
 {
+  if(b<1200){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'M4A1-BLUE';
     var requestBody = JSON.stringify({
@@ -201,11 +258,24 @@ function Buy5()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-1200;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an M4A1-BLUE!!");
+  }
 }
 
 function Buy6()
 {
+  if(b<800){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'SNIPER';
     var requestBody = JSON.stringify({
@@ -214,11 +284,24 @@ function Buy6()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-800;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an SNIPER!!");
+  }
 }
 
 function Buy7 ()
 {
+  if(b<2500){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'AK47-PINK';
     var requestBody = JSON.stringify({
@@ -227,11 +310,24 @@ function Buy7 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-2500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an AK47-PINK!!");
+  }
 }
 
 function Buy8 ()
 {
+  if(b<700){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else {
   request.open('POST','');
     WeaponName = 'PANTHER';
     var requestBody = JSON.stringify({
@@ -240,11 +336,24 @@ function Buy8 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-700;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an PANTHER!!");
+  }
 }
 
 function Buy9 ()
 {
+  if(b<800){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'REAPER';
     var requestBody = JSON.stringify({
@@ -253,11 +362,24 @@ function Buy9 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-800;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an REAPER!!");
+  }
 }
 
 function Buy10 ()
 {
+  if(b<1000){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'RW';
     var requestBody = JSON.stringify({
@@ -266,11 +388,24 @@ function Buy10 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-1000;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an RW!!");
+  }
 }
 
 function Buy11 ()
 {
+  if(b<600){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'WIND';
     var requestBody = JSON.stringify({
@@ -279,11 +414,24 @@ function Buy11 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-600;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an WIND!!");
+  }
 }
 
 function Buy12 ()
 {
+  if(b<2000){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'EAGLE';
     var requestBody = JSON.stringify({
@@ -292,11 +440,24 @@ function Buy12 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-2000;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an EAGLE!!");
+  }
 }
 
 function Buy13 ()
 {
+  if(b<700){
+    alert("You do NOT have enough cash, please recharge first!");
+}
+else{
   request.open('POST','');
     WeaponName = 'TIGER';
     var requestBody = JSON.stringify({
@@ -305,11 +466,24 @@ function Buy13 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-700;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an TIGER!!");
+  }
 }
 
 function Buy14 ()
 {
+  if(b<500){
+    alert("You do NOT have enough cash, please recharge first!");
+  }
+  else{
   request.open('POST','');
     WeaponName = 'HAMSTER';
     var requestBody = JSON.stringify({
@@ -318,7 +492,16 @@ function Buy14 ()
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+    b=b-500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
     alert("Thank you for the purchase of an HAMSTER!!");
+  }
 }
 
 
@@ -338,6 +521,10 @@ buy[10].addEventListener('click',Buy11);
 buy[11].addEventListener('click',Buy12);
 buy[12].addEventListener('click',Buy13);
 buy[13].addEventListener('click',Buy14);
+
+//**********************************************************
+//sell an item
+
 
 
 //**********************************************************
