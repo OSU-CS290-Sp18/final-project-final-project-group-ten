@@ -155,10 +155,17 @@ function adds (item) {
         });
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
+<<<<<<< HEAD
 
 
   });
 
+=======
+
+
+  });
+
+>>>>>>> 74c9718d681a142672932d171acd2b9f10f276b8
 }
 
 function addMoney(weaponName)
