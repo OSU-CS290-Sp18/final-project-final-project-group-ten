@@ -156,7 +156,6 @@ function adds (item) {
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(requestBody);
   });
-  });
 }
 
 function addMoney(weaponName)
@@ -473,4 +472,3 @@ function addMoney(weaponName)
 //
 //
 // createPostButton.addEventListener('click', MatchWeapon);
-
