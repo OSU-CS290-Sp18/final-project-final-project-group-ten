@@ -93,21 +93,11 @@ app.post('/', function (req,res,next){
   whole weapon from data base.
 */
 app.post('/PlayerBag', function (req,res,next){
-  var name=req.body.name;
-  var Collection=mongoDB.collection('player');
+  var weaponName=req.body.name;
+  var player=mongoDB.collection('player');
 
-  for(var i=0;i<Collection.length;i+=1){
-    if(Collection[i].item===name){
-      if(Collection[i].count===1){
-        Collection.deleteOne({item:name});
+  player.deleteOne({item:weaponName});
 
-      }
-      else{
-        Collection[i].count-=1;
-      }
-    }
-
-  }
 
 
 });
