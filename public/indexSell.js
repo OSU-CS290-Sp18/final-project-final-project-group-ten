@@ -134,14 +134,202 @@ getRepo.addEventListener('click', CheckRepo);
 
 
 
-var weaponToSell = document.getElementById('sell');
+var weaponToSell = document.getElementsByClassName('sell');
+  for(var i=0;i<weaponToSell.length;i+=1){
+    // var item = weaponToSell[i].parentNode.id;
+    adds(weaponToSell[i]);
+  }
 
-function sellWeapon ()
-{
-  console.log("=======sellWeapon function called");
+
+function adds (item) {
+  item.addEventListener('click', function(){
+    var weaponName = item.parentNode.id;
+    var a = document.getElementById(weaponName);
+    addMoney(weaponName);
+    a.remove();
+    console.log(weaponName);
+    var request = new XMLHttpRequest();
+    request.open('POST','');
+    var requestBody = JSON.stringify({
+          name: weaponName
+        });
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(requestBody);
+
+
+  });
+
 }
 
-weaponToSell.addEventListener('click', sellWeapon);
+function addMoney(weaponName)
+{
+  if(weaponName === "M4A1-GHOST")
+  {
+    b = b + 2500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "MP5-GREEN")
+  {
+    b = b + 500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "USP-GREEN")
+  {
+    b = b + 300;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "ROCK")
+  {
+    b = b + 600;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "M4A1-BLUE")
+  {
+    b = b + 1200;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "SNIPER")
+  {
+    b = b + 800;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "AK47-PINK")
+  {
+    b = b + 2500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "PANTHER")
+  {
+    b = b + 700;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "REAPER")
+  {
+    b = b + 800;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "RW")
+  {
+    b = b + 1000;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "WIND")
+  {
+    b = b + 600;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "EAGLE")
+  {
+    b = b + 2000;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "TIGER")
+  {
+    b = b +700;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+  else if (weaponName === "HAMSTER")
+  {
+    b = b + 500;
+    var a = document.createTextNode('Cash: $'+ b);
+    var t = document.createElement("li");
+    t.appendChild(a);
+    t.classList.add("navitem");
+    t.classList.add("cash");
+    var c = document.getElementById('navlist');
+    c.replaceChild(t, c.childNodes[3]);
+  }
+}
+
+
+// for(var i=0;i<weaponToSell.length;i+=1){
+//   var a = i;
+//   weaponToSell[i].addEventListener('click', function (req,res)
+//   {
+//     console.log("=======sellWeapon function called");
+//     console.log(weaponToSell.length);
+//     console.log(a);
+//
+//   });
+// }
 
 //**********************************************************
 //sell an item
