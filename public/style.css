@@ -9,7 +9,7 @@ body{
   background-image:url('http://paperlief.com/images/counter-strike-global-offensive-logo-wallpaper-2.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; 
+  background-position: center;
   background-size: 100% 100%;
   margin: 0;
 }
@@ -199,7 +199,7 @@ nav{
 }
 
 article.item {
-    
+
 }
 
 #create-item-button{
@@ -386,8 +386,9 @@ article.item {
 
 .sell{
   position: relative;
-  left:230px;
-  bottom: 97px;
+  left:100px;
+  top: 255px;
+  height: 30px;
 }
 
 .sell-place{
